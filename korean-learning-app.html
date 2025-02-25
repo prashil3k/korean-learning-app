@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Learning App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .korean-word {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #4a6ee0;
+        }
+        .english-meaning {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .example {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .translation {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #777;
+            font-style: italic;
+        }
+        button {
+            background-color: #4a6ee0;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3a5dcf;
+        }
+        .secondary-button {
+            background-color: #6c757d;
+        }
+        .secondary-button:hover {
+            background-color: #5a6268;
+        }
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin: 30px 0 10px 0;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #4a6ee0;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+        .progress-text {
+            text-align: right;
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .word-circles {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .word-circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #e9ecef;
+        }
+        .word-circle.current {
+            background-color: #4a6ee0;
+        }
+        .word-circle.completed {
+            background-color: #28a745;
+        }
+        #csvUpload {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed #4a6ee0;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        #csvInput {
+            display: none;
+        }
+        #csvLabel {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4a6ee0;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #csvFileName {
+            margin-top: 10px;
+            color: #6c757d;
+        }
+        .instructions {
+            background-color: #fff8e5;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Korean Learning App</h1>
+    
+    <div id="startScreen" class="card">
+        <h2>Welcome to Korean Learning</h2>
+        <p>Learn Korean words in context with this simple app</p>
+        <button id="startButton">Start Learning</button>
+        <button id="continueButton">Continue Where I Left Off</button>
+        <button id="uploadButton" class="secondary-button">Upload Vocabulary</button>
+    </div>
+
+    <div id="uploadScreen" class="card hidden">
+        <h2>Upload Vocabulary</h2>
+        <div class="instructions">
+            <p>Upload a CSV file with the following columns:</p>
+            <p><strong>korean,english,example1,translation1,example2,translation2</strong></p>
+            <p>For example:</p>
+            <p>책,book,이 책은 재미있어요.,This book is interesting.,책을 읽고 있어요.,I am reading a book.</p>
+        </div>
+        <div id="csvUpload">
+            <input type="file" id="csvInput" accept=".csv">
+            <label for="csvInput" id="csvLabel">Choose CSV File</label>
+            <div id="csvFileName">No file chosen</div>
+        </div>
+        <button id="processButton" disabled>Process Vocabulary</button>
+        <button id="backButton" class="secondary-button">Back</button>
+    </div>
+
+    <div id="learningContainer" class="hidden">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-text" id="progressText">Word 1 of 3 (Chapter 1)</div>
+        
+        <div class="word-circles" id="wordCircles">
+            <!-- Circles will be generated dynamically -->
+        </div>
+
+        <div id="screen1" class="card">
+            <div class="korean-word" id="koreanWord1"></div>
+            <button id="nextButton1">Next</button>
+        </div>
+
+        <div id="screen2" class="card hidden">
+            <div class="korean-word" id="koreanWord2"></div>
+            <div class="english-meaning" id="englishMeaning"></div>
+            <button id="nextButton2">Next</button>
+        </div>
+
+        <div id="screen3" class="card hidden">
+            <div class="example" id="koreanExample1"></div>
+            <button id="nextButton3">Next</button>
+        </div>
+
+        <div id="screen4" class="card hidden">
+            <div class="example" id="koreanExample1b"></div>
+            <div class="translation" id="englishExample1"></div>
+            <button id="nextButton4">Next</button>
+        </div>
+
+        <div id="screen5" class="card hidden">
+            <div class="example" id="koreanExample2"></div>
+            <button id="nextButton5">Next</button>
+        </div>
+
+        <div id="screen6" class="card hidden">
+            <div class="example" id="koreanExample2b"></div>
+            <div class="translation" id="englishExample2"></div>
+            <button id="nextButton6">Next</button>
+        </div>
+
+        <div id="screen7" class="card hidden">
+            <div class="korean-word" id="koreanWord3"></div>
+            <h3>Do you know this word?</h3>
+            <button id="yesButton">Yes, I Know It</button>
+            <button id="noButton" class="secondary-button">No, Review Again</button>
+        </div>
+
+        <div id="screen8" class="card hidden">
+            <h3>Great job!</h3>
+            <div class="korean-word" id="koreanWord4"></div>
+            <div class="english-meaning" id="englishMeaning2"></div>
+            <div class="example" id="koreanExample1c"></div>
+            <div class="translation" id="englishExample1b"></div>
+            <div class="example" id="koreanExample2c"></div>
+            <div class="translation" id="englishExample2b"></div>
+            <button id="nextWordButton">Next Word</button>
+        </div>
+
+        <div id="peekContainer" class="hidden">
+            <button id="peekButton" class="secondary-button">Peek at Next Word</button>
+            <div id="peekPreview" class="card hidden">
+                <h3>Coming Up Next</h3>
+                <div class="korean-word" id="peekWord"></div>
+                <div class="english-meaning" id="peekMeaning"></div>
+                <button id="closePeekButton">Close Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="chapterComplete" class="card hidden">
+        <h2>Chapter Complete!</h2>
+        <p>You've learned all words in this chapter.</p>
+        <button id="nextChapterButton">Start Next Chapter</button>
+        <button id="restartButton" class="secondary-button">Restart Current Chapter</button>
+    </div>
+
+    <script>
+        // Default vocabulary (can be replaced by CSV upload)
+        let vocabulary = [
+            {
+                korean: '책',
+                english: 'book',
+                example1: '이 책은 재미있어요.',
+                translation1: 'This book is interesting.',
+                example2: '책을 읽고 있어요.',
+                translation2: 'I am reading a book.'
+            },
+            {
+                korean: '학교',
+                english: 'school',
+                example1: '학교에 가요.',
+                translation1: 'I go to school.',
+                example2: '학교는 어디에 있어요?',
+                translation2: 'Where is the school?'
+            },
+            {
+                korean: '친구',
+                english: 'friend',
+                example1: '친구를 만나요.',
+                translation1: 'I meet my friend.',
+                example2: '그는 제 친구예요.',
+                translation2: 'He is my friend.'
+            }
+        ];
+
+        // App state
+        let state = {
+            currentChapter: 1,
+            currentWordIndex: 0,
+            currentScreen: 1,
+            completedWords: [],
+            chapterSize: 3 // Number of words per chapter
+        };
+
+        // DOM elements
+        const startScreen = document.getElementById('startScreen');
+        const uploadScreen = document.getElementById('uploadScreen');
+        const learningContainer = document.getElementById('learningContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const wordCircles = document.getElementById('wordCircles');
+        const chapterComplete = document.getElementById('chapterComplete');
+        const peekContainer = document.getElementById('peekContainer');
+        const peekPreview = document.getElementById('peekPreview');
+
+        // Event listeners for main navigation
+        document.getElementById('startButton').addEventListener('click', startLearning);
+        document.getElementById('continueButton').addEventListener('click', continueLearning);
+        document.getElementById('uploadButton').addEventListener('click', showUploadScreen);
+        document.getElementById('backButton').addEventListener('click', showStartScreen);
+        document.getElementById('nextChapterButton').addEventListener('click', startNextChapter);
+        document.getElementById('restartButton').addEventListener('click', restartChapter);
+        
+        // Event listeners for screen navigation
+        document.getElementById('nextButton1').addEventListener('click', () => goToScreen(2));
+        document.getElementById('nextButton2').addEventListener('click', () => goToScreen(3));
+        document.getElementById('nextButton3').addEventListener('click', () => goToScreen(4));
+        document.getElementById('nextButton4').addEventListener('click', () => goToScreen(5));
+        document.getElementById('nextButton5').addEventListener('click', () => goToScreen(6));
+        document.getElementById('nextButton6').addEventListener('click', () => goToScreen(7));
+        document.getElementById('yesButton').addEventListener('click', () => goToScreen(8));
+        document.getElementById('noButton').addEventListener('click', () => goToScreen(1));
+        document.getElementById('nextWordButton').addEventListener('click', nextWord);
+        
+        // Peek functionality
+        document.getElementById('peekButton').addEventListener('click', togglePeek);
+        document.getElementById('closePeekButton').addEventListener('click', togglePeek);
+        
+        // File upload handling
+        document.getElementById('csvInput').addEventListener('change', updateFileName);
+        document.getElementById('processButton').addEventListener('click', processCSV);
+
+        // Initialize from local storage if available
+        function initializeFromStorage() {
+            const savedState = localStorage.getItem('koreanLearningState');
+            const savedVocabulary = localStorage.getItem('koreanLearningVocabulary');
+            
+            if (savedState) {
+                state = JSON.parse(savedState);
+                document.getElementById('continueButton').disabled = false;
+            } else {
+                document.getElementById('continueButton').disabled = true;
+            }
+            
+            if (savedVocabulary) {
+                vocabulary = JSON.parse(savedVocabulary);
+            }
+        }
+
+        // Save state to local storage
+        function saveState() {
+            localStorage.setItem('koreanLearningState', JSON.stringify(state));
+            localStorage.setItem('koreanLearningVocabulary', JSON.stringify(vocabulary));
+        }
+
+        // Start learning from beginning
+        function startLearning() {
+            state.currentChapter = 1;
+            state.currentWordIndex = 0;
+            state.currentScreen = 1;
+            state.completedWords = [];
+            saveState();
+            showLearningScreen();
+        }
+
+        // Continue from saved state
+        function continueLearning() {
+            showLearningScreen();
+        }
+
+        // Show upload screen
+        function showUploadScreen() {
+            startScreen.classList.add('hidden');
+            uploadScreen.classList.remove('hidden');
+        }
+
+        // Show start screen
+        function showStartScreen() {
+            uploadScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }
+
+        // Show learning screen
+        function showLearningScreen() {
+            startScreen.classList.add('hidden');
+            learningContainer.classList.remove('hidden');
+            updateUI();
+        }
+
+        // Go to specific screen in the learning flow
+        function goToScreen(screenNumber) {
+            // Hide all screens
+            for (let i = 1; i <= 8; i++) {
+                document.getElementById(`screen${i}`).classList.add('hidden');
+            }
+            
+            // Show requested screen
+            document.getElementById(`screen${screenNumber}`).classList.remove('hidden');
+            
+            state.currentScreen = screenNumber;
+            saveState();
+            
+            // Show/hide peek button at appropriate screens
+            if (screenNumber >= 7) {
+                peekContainer.classList.remove('hidden');
+            } else {
+                peekContainer.classList.add('hidden');
+                peekPreview.classList.add('hidden');
+            }
+        }
+
+        // Move to next word
+        function nextWord() {
+            // Mark current word as completed
+            if (!state.completedWords.includes(state.currentWordIndex)) {
+                state.completedWords.push(state.currentWordIndex);
+            }
+            
+            // Check if chapter is complete
+            const startIndex = (state.currentChapter - 1) * state.chapterSize;
+            const endIndex = startIndex + state.chapterSize - 1;
+            
+            if (state.currentWordIndex >= endIndex) {
+                // Chapter complete
+                learningContainer.classList.add('hidden');
+                chapterComplete.classList.remove('hidden');
+            } else {
+                // Move to next word
+                state.currentWordIndex++;
+                state.currentScreen = 1;
+                saveState();
+                updateUI();
+                goToScreen(1);
+            }
+        }
+
+        // Start next chapter
+        function startNextChapter() {
+            state.currentChapter++;
+            state.currentWordIndex = (state.currentChapter - 1) * state.chapterSize;
+            state.currentScreen = 1;
+            saveState();
+            
+            chapterComplete.classList.add('hidden');
+            learningContainer.classList.remove('hidden');
+            
+            updateUI();
+            goToScreen(1);
+        }
+
+        // Restart current chapter
+        function restartChapter() {
+            // Remove current chapter words from completed list
+            const startIndex = (state.currentChapter - 1) * state.chapterSize;
+            const endIndex = startIndex + state.chapterSize;
+            
+            state.completedWords = state.completedWords.filter(index => 
+                index < startIndex || index >= endIndex
+            );
+            
+            state.currentWordIndex = startIndex;
+            state.currentScreen = 1;
+            saveState();
+            
+            chapterComplete.classList.add('hidden');
+            learningContainer.classList.remove('hidden');
+            
+            updateUI();
+            goToScreen(1);
+        }
+
+        // Toggle peek at next word
+        function togglePeek() {
+            peekPreview.classList.toggle('hidden');
+            
+            if (!peekPreview.classList.contains('hidden')) {
+                updatePeekPreview();
+            }
+        }
+
+        // Update peek preview with next word
+        function updatePeekPreview() {
+            const nextIndex = state.currentWordIndex + 1;
+            if (nextIndex < vocabulary.length) {
+                const nextWord = vocabulary[nextIndex];
+                document.getElementById('peekWord').textContent = nextWord.korean;
+                document.getElementById('peekMeaning').textContent = nextWord.english;
+            }
+        }
+
+        // Update UI with current word data
+        function updateUI() {
+            const currentWord = vocabulary[state.currentWordIndex];
+            
+            if (!currentWord) {
+                console.error('Word not found in vocabulary!');
+                return;
+            }
+            
+            // Update progress indicators
+            updateProgressIndicators();
+            
+            // Populate all screens with current word data
+            document.getElementById('koreanWord1').textContent = currentWord.korean;
+            document.getElementById('koreanWord2').textContent = currentWord.korean;
+            document.getElementById('koreanWord3').textContent = currentWord.korean;
+            document.getElementById('koreanWord4').textContent = currentWord.korean;
+            
+            document.getElementById('englishMeaning').textContent = currentWord.english;
+            document.getElementById('englishMeaning2').textContent = currentWord.english;
+            
+            document.getElementById('koreanExample1').textContent = currentWord.example1;
+            document.getElementById('koreanExample1b').textContent = currentWord.example1;
+            document.getElementById('koreanExample1c').textContent = currentWord.example1;
+            
+            document.getElementById('englishExample1').textContent = currentWord.translation1;
+            document.getElementById('englishExample1b').textContent = currentWord.translation1;
+            
+            document.getElementById('koreanExample2').textContent = currentWord.example2;
+            document.getElementById('koreanExample2b').textContent = currentWord.example2;
+            document.getElementById('koreanExample2c').textContent = currentWord.example2;
+            
+            document.getElementById('englishExample2').textContent = currentWord.translation2;
+            document.getElementById('englishExample2b').textContent = currentWord.translation2;
+        }
+
+        // Update progress indicators
+        function updateProgressIndicators() {
+            // Calculate progress percentage
+            const chapterStartIndex = (state.currentChapter - 1) * state.chapterSize;
+            const chapterProgress = state.currentWordIndex - chapterStartIndex + 1;
+            const progressPercentage = (chapterProgress / state.chapterSize) * 100;
+            
+            // Update progress bar
+            progressBar.style.width = `${progressPercentage}%`;
+            
+            // Update progress text
+            progressText.textContent = `Word ${chapterProgress} of ${state.chapterSize} (Chapter ${state.currentChapter})`;
+            
+            // Update word circles
+            updateWordCircles();
+        }
+
+        // Update word circles
+        function updateWordCircles() {
+            wordCircles.innerHTML = '';
+            
+            const chapterStartIndex = (state.currentChapter - 1) * state.chapterSize;
+            
+            // Create circles for each word in current chapter
+            for (let i = 0; i < state.chapterSize; i++) {
+                const wordIndex = chapterStartIndex + i;
+                const circle = document.createElement('div');
+                circle.className = 'word-circle';
+                
+                if (wordIndex === state.currentWordIndex) {
+                    circle.classList.add('current');
+                } else if (state.completedWords.includes(wordIndex)) {
+                    circle.classList.add('completed');
+                }
+                
+                wordCircles.appendChild(circle);
+            }
+        }
+
+        // Handle file name update
+        function updateFileName() {
+            const fileInput = document.getElementById('csvInput');
+            const fileNameDisplay = document.getElementById('csvFileName');
+            const processButton = document.getElementById('processButton');
+            
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = fileInput.files[0].name;
+                processButton.disabled = false;
+            } else {
+                fileNameDisplay.textContent = 'No file chosen';
+                processButton.disabled = true;
+            }
+        }
+
+        // Process CSV file
+        function processCSV() {
+            const fileInput = document.getElementById('csvInput');
+            
+            if (fileInput.files.length === 0) {
+                alert('Please select a CSV file first.');
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const content = e.target.result;
+                parseCSV(content);
+            };
+            
+            reader.readAsText(file);
+        }
+
+        // Parse CSV content
+        function parseCSV(content) {
+            const lines = content.split('\n');
+            const newVocabulary = [];
+            
+            // Skip header if it exists
+            const startIndex = (lines[0].includes('korean,english') || 
+                              lines[0].includes('Korean,English')) ? 1 : 0;
+            
+            for (let i = startIndex; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+                
+                const parts = line.split(',');
+                if (parts.length < 6) {
+                    alert(`Line ${i+1} doesn't have all required fields. Expected 6 fields, got ${parts.length}.`);
+                    continue;
+                }
+                
+                newVocabulary.push({
+                    korean: parts[0].trim(),
+                    english: parts[1].trim(),
+                    example1: parts[2].trim(),
+                    translation1: parts[3].trim(),
+                    example2: parts[4].trim(),
+                    translation2: parts[5].trim()
+                });
+            }
+            
+            if (newVocabulary.length === 0) {
+                alert('No valid vocabulary entries found in the CSV file.');
+                return;
+            }
+            
+            vocabulary = newVocabulary;
+            state = {
+                currentChapter: 1,
+                currentWordIndex: 0,
+                currentScreen: 1,
+                completedWords: [],
+                chapterSize: 3
+            };
+            
+            saveState();
+            alert(`Successfully loaded ${vocabulary.length} vocabulary items!`);
+            
+            // Return to start screen
+            showStartScreen();
+        }
+
+        // Initialize the app
+        initializeFromStorage();
+    </script>
+</body>
+</html>

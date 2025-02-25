@@ -1,0 +1,215 @@
+korean,english,example1,translation1,example2,translation2
+시간,time,시간이 없어요.,I don't have time.,시간이 몇 시예요?,What time is it?
+사람,person,많은 사람이 있어요.,There are many people.,그 사람은 누구예요?,Who is that person?
+일,work,일이 많아요.,I have a lot of work.,오늘 일이 어때요?,How is work today?
+년,year,작년에 한국에 왔어요.,I came to Korea last year.,올해는 2025년이에요.,This year is 2025.
+말,language/words,한국말을 배워요.,I'm learning Korean language.,이 말이 무슨 뜻이에요?,What does this word mean?
+것,thing,이것은 무엇이에요?,What is this thing?,좋은 것을 샀어요.,I bought a good thing.
+집,house/home,집에 갈 거예요.,I will go home.,집이 어디에 있어요?,Where is your house?
+문제,problem,문제가 있어요.,There is a problem.,이 문제를 풀어 보세요.,Try to solve this problem.
+중,during/middle,수업 중에 전화가 왔어요.,The phone rang during class.,중간 시험이 있어요.,There is a midterm exam.
+가장,most,가장 좋아하는 음식은 뭐예요?,What's your most favorite food?,이것이 가장 비싸요.,This is the most expensive.
+마음,heart/mind,마음이 아파요.,My heart hurts.,마음에 들어요.,I like it (It suits my heart).
+생각,thought,어떤 생각이 있어요?,What thoughts do you have?,그 생각은 좋아요.,That thought is good.
+이유,reason,이유가 뭐예요?,What is the reason?,이유를 설명해 주세요.,Please explain the reason.
+번,number,전화번호가 뭐예요?,What's your phone number?,세 번 읽었어요.,I read it three times.
+이름,name,이름이 뭐예요?,What is your name?,제 이름은 민수예요.,My name is Minsu.
+물,water,물 좀 주세요.,Please give me some water.,물이 너무 차가워요.,The water is too cold.
+질문,question,질문이 있어요.,I have a question.,질문에 대답해 주세요.,Please answer the question.
+친구,friend,친구를 만났어요.,I met my friend.,친구와 영화를 봤어요.,I watched a movie with my friend.
+가격,price,가격이 얼마예요?,How much is the price?,가격이 너무 비싸요.,The price is too expensive.
+모두,everyone/all,모두 왔어요.,Everyone came.,모두 다 먹었어요.,I ate everything.
+방,room,방이 넓어요.,The room is spacious.,방을 청소했어요.,I cleaned the room.
+옆,next to,옆에 앉아 주세요.,Please sit next to me.,학교 옆에 은행이 있어요.,There's a bank next to the school.
+뒤,behind,뒤에 서세요.,Stand behind.,뒤로 가세요.,Go to the back.
+전화,phone/call,전화 좀 해도 돼요?,May I make a phone call?,전화번호를 알려 주세요.,Please tell me your phone number.
+공부,study,한국어를 공부해요.,I study Korean.,공부를 열심히 했어요.,I studied hard.
+글,writing,글을 잘 써요.,He/She writes well.,이 글을 읽어 보세요.,Please read this writing.
+학교,school,학교에 가요.,I go to school.,학교가 어디에 있어요?,Where is the school?
+길,road/way,길이 막혀요.,The road is blocked.,길을 알려 주세요.,Please show me the way.
+오늘,today,오늘 날씨가 좋아요.,The weather is good today.,오늘 뭐 했어요?,What did you do today?
+어제,yesterday,어제 비가 왔어요.,It rained yesterday.,어제 무슨 일이 있었어요?,What happened yesterday?
+내일,tomorrow,내일 만나요.,Let's meet tomorrow.,내일 시험이 있어요.,There's an exam tomorrow.
+식당,restaurant,식당에서 밥을 먹어요.,I eat meals at the restaurant.,이 식당은 맛있어요.,This restaurant is delicious.
+여기,here,여기에 앉으세요.,Please sit here.,여기가 어디예요?,Where is this place?
+교실,classroom,교실에서 공부해요.,I study in the classroom.,교실이 깨끗해요.,The classroom is clean.
+병원,hospital,병원에 갔어요.,I went to the hospital.,병원이 어디에 있어요?,Where is the hospital?
+가게,store,가게에서 물건을 샀어요.,I bought items at the store.,이 가게는 싸요.,This store is cheap.
+시장,market,시장에서 과일을 샀어요.,I bought fruit at the market.,시장이 어디에 있어요?,Where is the market?
+도서관,library,도서관에서 책을 읽어요.,I read books at the library.,도서관이 조용해요.,The library is quiet.
+화장실,bathroom,화장실이 어디에 있어요?,Where is the bathroom?,화장실에 갔다 올게요.,I'll go to the bathroom and come back.
+지하철,subway,지하철을 탔어요.,I took the subway.,지하철역이 어디에 있어요?,Where is the subway station?
+버스,bus,버스를 기다려요.,I'm waiting for the bus.,버스가 늦었어요.,The bus was late.
+공항,airport,공항에 도착했어요.,I arrived at the airport.,공항이 멀어요.,The airport is far.
+기차,train,기차를 탔어요.,I took the train.,기차가 빨라요.,The train is fast.
+택시,taxi,택시를 탔어요.,I took a taxi.,택시를 불러 주세요.,Please call a taxi for me.
+아침,morning,아침에 일어났어요.,I woke up in the morning.,아침을 먹었어요.,I ate breakfast.
+점심,lunch,점심을 먹었어요.,I ate lunch.,점심 시간이에요.,It's lunch time.
+저녁,evening/dinner,저녁에 만나요.,Let's meet in the evening.,저녁을 같이 먹어요.,Let's eat dinner together.
+밤,night,밤에 공부해요.,I study at night.,밤이 조용해요.,The night is quiet.
+한국,Korea,한국에 살아요.,I live in Korea.,한국 음식을 좋아해요.,I like Korean food.
+한국어,Korean language,한국어를 배워요.,I'm learning Korean.,한국어가 어려워요.,Korean is difficult.
+영어,English,영어를 공부해요.,I study English.,영어로 말해 주세요.,Please speak in English.
+중국,China,중국에 갔어요.,I went to China.,중국 음식을 먹었어요.,I ate Chinese food.
+일본,Japan,일본에 여행 갔어요.,I traveled to Japan.,일본어를 배우고 싶어요.,I want to learn Japanese.
+미국,America,미국에서 왔어요.,I came from America.,미국 영화를 봤어요.,I watched an American movie.
+음식,food,음식이 맛있어요.,The food is delicious.,한국 음식을 좋아해요.,I like Korean food.
+과일,fruit,과일을 샀어요.,I bought fruit.,과일이 신선해요.,The fruit is fresh.
+물건,item/thing,물건을 샀어요.,I bought some items.,이 물건은 비싸요.,This item is expensive.
+옷,clothes,옷을 샀어요.,I bought clothes.,이 옷이 예뻐요.,This clothing is pretty.
+신발,shoes,신발을 신었어요.,I wore shoes.,새 신발을 샀어요.,I bought new shoes.
+주말,weekend,주말에 쉬었어요.,I rested on the weekend.,주말에 뭐 할 거예요?,What will you do on the weekend?
+평일,weekday,평일에 일해요.,I work on weekdays.,평일은 바빠요.,Weekdays are busy.
+어떻게,how,어떻게 가요?,How do I go?,어떻게 지냈어요?,How have you been?
+왜,why,왜 늦었어요?,Why were you late?,왜 한국어를 배워요?,Why are you learning Korean?
+누구,who,누구예요?,Who is it?,누구를 만났어요?,Who did you meet?
+언제,when,언제 만날까요?,When shall we meet?,언제 한국에 왔어요?,When did you come to Korea?
+어디,where,어디에 가요?,Where are you going?,어디에서 왔어요?,Where did you come from?
+무엇,what,무엇을 공부해요?,What are you studying?,무엇을 먹고 싶어요?,What do you want to eat?
+몇,how many,몇 시예요?,What time is it?,몇 개 샀어요?,How many did you buy?
+얼마,how much,얼마예요?,How much is it?,얼마나 기다렸어요?,How long did you wait?
+어느,which,어느 것을 골랐어요?,Which one did you choose?,어느 나라에서 왔어요?,Which country did you come from?
+다음,next,다음 주에 만나요.,Let's meet next week.,다음은 뭐예요?,What's next?
+지금,now,지금 몇 시예요?,What time is it now?,지금 뭐 해요?,What are you doing now?
+지난,last/past,지난주에 만났어요.,We met last week.,지난번에 갔던 식당이에요.,It's the restaurant we went to last time.
+이번,this time,이번 주말에 뭐 해요?,What are you doing this weekend?,이번에는 성공할 거예요.,I'll succeed this time.
+저번,last time,저번에 봤어요.,I saw it last time.,저번 주에 만났어요.,We met last week.
+식사,meal,식사를 했어요.,I had a meal.,식사 맛있게 하세요.,Enjoy your meal.
+맛,taste,맛이 어때요?,How does it taste?,맛있어요.,It's delicious.
+요리,cooking,요리를 배워요.,I'm learning cooking.,요리를 잘해요.,I cook well.
+운동,exercise,운동을 해요.,I exercise.,운동을 좋아해요.,I like exercising.
+건강,health,건강이 좋아요.,My health is good.,건강을 위해 운동해요.,I exercise for health.
+약,medicine,약을 먹었어요.,I took medicine.,약을 사러 갔어요.,I went to buy medicine.
+병,illness,병이 낫고 있어요.,My illness is getting better.,무슨 병이에요?,What illness is it?
+아프다,to be sick,머리가 아파요.,I have a headache.,어디가 아파요?,Where does it hurt?
+의사,doctor,의사를 만났어요.,I met the doctor.,의사가 되고 싶어요.,I want to become a doctor.
+간호사,nurse,간호사가 주사를 놓았어요.,The nurse gave me an injection.,간호사에게 물어봤어요.,I asked the nurse.
+약국,pharmacy,약국에 갔어요.,I went to the pharmacy.,약국이 어디에 있어요?,Where is the pharmacy?
+몸,body,몸이 좋아졌어요.,My body got better.,몸이 피곤해요.,My body is tired.
+머리,head,머리가 아파요.,My head hurts.,머리를 자르고 싶어요.,I want to cut my hair.
+얼굴,face,얼굴이 예뻐요.,Her face is pretty.,얼굴을 씻었어요.,I washed my face.
+눈,eye,눈이 아파요.,My eyes hurt.,눈이 크고 예뻐요.,Her eyes are big and pretty.
+코,nose,코가 막혔어요.,My nose is blocked.,코가 높아요.,His nose is high (prominent).
+입,mouth,입이 아파요.,My mouth hurts.,입을 벌려 보세요.,Please open your mouth.
+귀,ear,귀가 아파요.,My ears hurt.,귀에 들리지 않아요.,I can't hear with my ears.
+손,hand,손이 차가워요.,My hands are cold.,손을 씻었어요.,I washed my hands.
+발,foot,발이 아파요.,My feet hurt.,발이 크네요.,Your feet are big.
+다리,leg,다리가 아파요.,My legs hurt.,다리가 길어요.,Her legs are long.
+가족,family,가족이 있어요.,I have a family.,가족과 함께 여행했어요.,I traveled with my family.
+부모님,parents,부모님이 오셨어요.,My parents came.,부모님께 전화했어요.,I called my parents.
+아버지,father,아버지가 회사에 계세요.,My father is at the company.,아버지께 선물을 드렸어요.,I gave a gift to my father.
+어머니,mother,어머니가 요리를 하세요.,My mother is cooking.,어머니께 편지를 썼어요.,I wrote a letter to my mother.
+남편,husband,남편이 일해요.,My husband works.,남편과 저녁을 먹었어요.,I ate dinner with my husband.
+아내,wife,아내가 집에 있어요.,My wife is at home.,아내에게 선물을 줬어요.,I gave a gift to my wife.
+아들,son,아들이 공부해요.,My son is studying.,아들과 놀았어요.,I played with my son.
+딸,daughter,딸이 예뻐요.,My daughter is pretty.,딸과 쇼핑했어요.,I went shopping with my daughter.
+형,older brother (male's),형이 군대에 갔어요.,My older brother went to the military.,형에게 전화했어요.,I called my older brother.
+누나,older sister (male's),누나가 결혼했어요.,My older sister got married.,누나에게 선물을 줬어요.,I gave a gift to my older sister.
+오빠,older brother (female's),오빠가 취직했어요.,My older brother got a job.,오빠에게 문자했어요.,I texted my older brother.
+언니,older sister (female's),언니가 요리를 잘해요.,My older sister cooks well.,언니에게 물어봤어요.,I asked my older sister.
+동생,younger sibling,동생이 학교에 가요.,My younger sibling goes to school.,동생과 게임을 했어요.,I played games with my younger sibling.
+회사,company,회사에서 일해요.,I work at a company.,회사가 어디에 있어요?,Where is your company?
+직장,workplace,직장에 갔어요.,I went to my workplace.,직장이 어디예요?,Where is your workplace?
+일,work/job,일이 많아요.,I have a lot of work.,일을 찾고 있어요.,I'm looking for a job.
+직업,occupation,직업이 뭐예요?,What is your occupation?,좋은 직업을 갖고 싶어요.,I want to have a good occupation.
+사장님,boss,사장님을 만났어요.,I met the boss.,사장님이 오셨어요.,The boss has arrived.
+직원,employee,직원이 많아요.,There are many employees.,새 직원이 왔어요.,A new employee came.
+회의,meeting,회의가 있어요.,There is a meeting.,회의에 참석했어요.,I attended the meeting.
+퇴근,leaving work,퇴근했어요.,I left work.,퇴근 시간이에요.,It's time to leave work.
+출근,going to work,출근했어요.,I went to work.,출근 시간이 몇 시예요?,What time do you go to work?
+휴가,vacation,휴가를 갔어요.,I went on vacation.,휴가가 필요해요.,I need a vacation.
+주소,address,주소가 어디예요?,What is your address?,주소를 알려 주세요.,Please tell me your address.
+이메일,email,이메일을 보냈어요.,I sent an email.,이메일 주소가 뭐예요?,What is your email address?
+전화번호,phone number,전화번호가 뭐예요?,What is your phone number?,전화번호를 알려 주세요.,Please tell me your phone number.
+카드,card,카드로 결제할게요.,I'll pay with a card.,카드가 없어요.,I don't have a card.
+현금,cash,현금이 없어요.,I don't have cash.,현금으로 주세요.,Please give me cash.
+은행,bank,은행에 갔어요.,I went to the bank.,은행이 어디에 있어요?,Where is the bank?
+돈,money,돈이 없어요.,I don't have money.,돈을 저금했어요.,I saved money.
+공원,park,공원에서 산책했어요.,I walked in the park.,공원이 아름다워요.,The park is beautiful.
+바다,sea,바다에 갔어요.,I went to the sea.,바다가 아름다워요.,The sea is beautiful.
+산,mountain,산에 올라갔어요.,I climbed the mountain.,산이 높아요.,The mountain is high.
+강,river,강에서 수영했어요.,I swam in the river.,강물이 맑아요.,The river water is clear.
+나무,tree,나무가 크네요.,The tree is big.,나무를 심었어요.,I planted a tree.
+꽃,flower,꽃이 예뻐요.,The flower is pretty.,꽃을 선물했어요.,I gifted flowers.
+날씨,weather,날씨가 좋아요.,The weather is nice.,오늘 날씨가 어때요?,How is the weather today?
+바람,wind,바람이 많이 불어요.,The wind is blowing a lot.,바람이 시원해요.,The wind is cool.
+비,rain,비가 와요.,It's raining.,비가 많이 왔어요.,It rained a lot.
+눈,snow,눈이 와요.,It's snowing.,눈이 많이 왔어요.,It snowed a lot.
+맑다,to be clear,하늘이 맑아요.,The sky is clear.,오늘은 맑아요.,Today is clear.
+따뜻하다,to be warm,날씨가 따뜻해요.,The weather is warm.,물이 따뜻해요.,The water is warm.
+춥다,to be cold,날씨가 추워요.,The weather is cold.,밖이 추워요.,It's cold outside.
+덥다,to be hot,날씨가 더워요.,The weather is hot.,방이 더워요.,The room is hot.
+시원하다,to be cool,날씨가 시원해요.,The weather is cool.,음료수가 시원해요.,The drink is cool.
+즐겁다,to be enjoyable,여행이 즐거웠어요.,The trip was enjoyable.,즐거운 시간 보내세요.,Have an enjoyable time.
+행복하다,to be happy,행복해요.,I'm happy.,행복한 날이에요.,It's a happy day.
+졸리다,to be sleepy,졸려요.,I'm sleepy.,어제 졸렸어요.,I was sleepy yesterday.
+피곤하다,to be tired,피곤해요.,I'm tired.,일을 해서 피곤해요.,I'm tired because I worked.
+화나다,to be angry,화났어요.,I'm angry.,왜 화났어요?,Why are you angry?
+슬프다,to be sad,슬퍼요.,I'm sad.,슬픈 영화였어요.,It was a sad movie.
+기쁘다,to be pleased,기뻐요.,I'm pleased.,기쁜 소식이에요.,It's good news.
+좋다,to be good,좋아요.,It's good.,날씨가 좋아요.,The weather is good.
+나쁘다,to be bad,나빠요.,It's bad.,날씨가 나빠요.,The weather is bad.
+어렵다,to be difficult,어려워요.,It's difficult.,한국어가 어려워요.,Korean is difficult.
+쉽다,to be easy,쉬워요.,It's easy.,이 문제는 쉬워요.,This problem is easy.
+맛있다,to be delicious,맛있어요.,It's delicious.,이 음식은 맛있어요.,This food is delicious.
+맵다,to be spicy,매워요.,It's spicy.,김치가 매워요.,The kimchi is spicy.
+달다,to be sweet,달아요.,It's sweet.,이 과일은 달아요.,This fruit is sweet.
+짜다,to be salty,짜요.,It's salty.,국이 짜요.,The soup is salty.
+싱겁다,to be bland,싱거워요.,It's bland.,음식이 싱거워요.,The food is bland.
+바쁘다,to be busy,바빠요.,I'm busy.,오늘 바빠요?,Are you busy today?
+중요하다,to be important,중요해요.,It's important.,이 일은 중요해요.,This work is important.
+필요하다,to be necessary,필요해요.,It's necessary.,돈이 필요해요.,I need money.
+가능하다,to be possible,가능해요.,It's possible.,내일 가능해요?,Is tomorrow possible?
+비싸다,to be expensive,비싸요.,It's expensive.,이 가방은 비싸요.,This bag is expensive.
+싸다,to be cheap,싸요.,It's cheap.,이 물건은 싸요.,This item is cheap.
+크다,to be big,커요.,It's big.,이 집은 커요.,This house is big.
+작다,to be small,작아요.,It's small.,이 가방은 작아요.,This bag is small.
+길다,to be long,길어요.,It's long.,이 길은 길어요.,This road is long.
+짧다,to be short,짧아요.,It's short.,머리가 짧아요.,The hair is short.
+높다,to be high/tall,높아요.,It's high.,이 건물은 높아요.,This building is high.
+낮다,to be low,낮아요.,It's low.,이 책상은 낮아요.,This desk is low.
+무겁다,to be heavy,무거워요.,It's heavy.,이 가방은 무거워요.,This bag is heavy.
+가볍다,to be light,가벼워요.,It's light.,이 책은 가벼워요.,This book is light.
+깨끗하다,to be clean,깨끗해요.,It's clean.,방이 깨끗해요.,The room is clean.
+더럽다,to be dirty,더러워요.,It's dirty.,옷이 더러워요.,The clothes are dirty.
+쉽다,to be easy,쉬워요.,It's easy.,이 문제는 쉬워요.,This problem is easy.
+어렵다,to be difficult,어려워요.,It's difficult.,한국어가 어려워요.,Korean is difficult.
+재미있다,to be interesting,재미있어요.,It's interesting.,이 영화는 재미있어요.,This movie is interesting.
+재미없다,to be boring,재미없어요.,It's boring.,이 책은 재미없어요.,This book is boring.
+빠르다,to be fast,빨라요.,It's fast.,이 기차는 빨라요.,This train is fast.
+느리다,to be slow,느려요.,It's slow.,이 버스는 느려요.,This bus is slow.
+쉽다,to be easy,쉬워요.,It's easy.,이 게임은 쉬워요.,This game is easy.
+어렵다,to be difficult,어려워요.,It's difficult.,한국어가 어려워요.,Korean is difficult.
+같다,to be same,같아요.,It's the same.,생각이 같아요.,Our thoughts are the same.
+다르다,to be different,달라요.,It's different.,의견이 달라요.,Our opinions are different.
+예쁘다,to be pretty,예뻐요.,It's pretty.,이 옷은 예뻐요.,This clothing is pretty.
+멋있다,to be cool/stylish,멋있어요.,It's cool.,그 사람은 멋있어요.,That person is cool.
+아름답다,to be beautiful,아름다워요.,It's beautiful.,이 풍경은 아름다워요.,This scenery is beautiful.
+새롭다,to be new,새로워요.,It's new.,이 방법은 새로워요.,This method is new.
+반갑다,to be glad,반가워요.,I'm glad to see you.,반가운 소식이에요.,It's glad news.
+유명하다,to be famous,유명해요.,It's famous.,그 배우는 유명해요.,That actor is famous.
+친절하다,to be kind,친절해요.,He/She is kind.,그 사람은 친절해요.,That person is kind.
+가깝다,to be close/near,가까워요.,It's close.,학교가 가까워요.,The school is close.
+멀다,to be far,멀어요.,It's far.,집이 멀어요.,The house is far.
+넓다,to be wide/spacious,넓어요.,It's spacious.,이 방은 넓어요.,This room is spacious.
+좁다,to be narrow,좁아요.,It's narrow.,이 길은 좁아요.,This road is narrow.
+배우다,to learn,한국어를 배워요.,I learn Korean.,춤을 배웠어요.,I learned dancing.
+가르치다,to teach,한국어를 가르쳐요.,I teach Korean.,학생들을 가르쳐요.,I teach students.
+공부하다,to study,한국어를 공부해요.,I study Korean.,도서관에서 공부했어요.,I studied at the library.
+읽다,to read,책을 읽어요.,I read a book.,신문을 읽었어요.,I read the newspaper.
+쓰다,to write,편지를 써요.,I write a letter.,일기를 썼어요.,I wrote a diary.
+보다,to see/watch,텔레비전을 봐요.,I watch television.,영화를 봤어요.,I watched a movie.
+듣다,to listen/hear,음악을 들어요.,I listen to music.,라디오를 들었어요.,I listened to the radio.
+말하다,to speak,한국어로 말해요.,I speak in Korean.,천천히 말했어요.,I spoke slowly.
+먹다,to eat,밥을 먹어요.,I eat rice.,아침을 먹었어요.,I ate breakfast.
+마시다,to drink,물을 마셔요.,I drink water.,커피를 마셨어요.,I drank coffee.
+자다,to sleep,일찍 자요.,I sleep early.,어제 늦게 잤어요.,I slept late yesterday.
+일어나다,to wake up,일찍 일어나요.,I wake up early.,7시에 일어났어요.,I woke up at 7 o'clock.
+앉다,to sit,여기에 앉아요.,I sit here.,의자에 앉았어요.,I sat on the chair.
+서다,to stand,여기에 서요.,I stand here.,줄에 서 있었어요.,I was standing in line.
+걷다,to walk,공원에서 걸어요.,I walk in the park.,한 시간 걸었어요.,I walked for one hour.
+달리다,to run,매일 달려요.,I run every day.,공원에서 달렸어요.,I ran in the park.
+오다,to come,학교에 와요.,I come to school.,어제 왔어요.,I came yesterday.
+가다,to go,학교에 가요.,I go to school.,어제 갔어요.,I went yesterday.
+타다,to ride,버스를 타요.,I ride the bus.,택시를 탔어요.,I rode a taxi.
+내리다,to get off,버스에서 내려요.,I get off the bus.,지하철에서 내렸어요.,I got off the subway.
